@@ -18,8 +18,8 @@ collections:
   # ==========================================
   # 1. TIẾNG ANH (EN)
   # ==========================================
-  - name: "en-blog"
-    label: "EN - Blog"
+  - name: "en-posts"
+    label: "EN - Posts"
     folder: "content/en" # Đường dẫn thư mục lưu file .md của bài viết EN Blog
     create: true
     sortable_fields:
@@ -72,27 +72,11 @@ collections:
         }
       - { label: "Content", name: "body", widget: "markdown" }
 
-  - name: "en-news"
-    label: "EN - News"
-    folder: "content/en"
-    create: true
-    slug: "{{slug}}"
-    format: "frontmatter"
-    fields: *blog_fields # Copy nguyên cụm fields ở trên xuống
-
   # ==========================================
   # 2. TIẾNG HÀN (KO)
   # ==========================================
-  - name: "ko-blog"
-    label: "KO - Blog"
-    folder: "content/ko"
-    create: true
-    slug: "{{slug}}"
-    format: "frontmatter"
-    fields: *blog_fields
-
-  - name: "ko-news"
-    label: "KO - News"
+  - name: "ko-post"
+    label: "KO - Post"
     folder: "content/ko"
     create: true
     slug: "{{slug}}"
