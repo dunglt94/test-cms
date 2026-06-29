@@ -22,8 +22,14 @@ collections:
     label: "EN - Blog"
     folder: "content/en" # Đường dẫn thư mục lưu file .md của bài viết EN Blog
     create: true
+    sortable_fields:
+      fields: ["date", "time", "title"]
+      default:
+        field: date
+        direction: descending
     slug: "{{slug}}"
     format: "frontmatter"
+    summary: "{{time}} - {{title}}"
     fields:
       &blog_fields # Dùng anchor để tái sử dụng các fields bên dưới cho nhanh
       - { label: "Title", name: "title", widget: "string" }
@@ -41,16 +47,28 @@ collections:
           label: "Type",
           name: "type",
           widget: "select",
-          options: ["blog", "news"],
+          options: ["Blog", "News"],
         }
       - {
           label: "Tags",
           name: "tags",
-          widget: "list",
-          allow_add: true,
-          collapsed: false,
-          summary: "{{fields.tag}}",
-          field: { label: "Tag", name: "tag", widget: "string" },
+          widget: "select",
+          multiple: true,
+          options:
+            [
+              "Artificial Intelligence",
+              "Salesforce Consulting",
+              "UI UX Design",
+              "Frontend Development",
+              "Technology",
+              "SAAS",
+              "Mobile App Development",
+              "QA and Testing",
+              "Emerging Technologies",
+              "Data Analytics",
+              "Hypothesis Testing",
+              "CRM and ERP Platform",
+            ],
         }
       - { label: "Content", name: "body", widget: "markdown" }
 
