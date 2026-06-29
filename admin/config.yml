@@ -1,9 +1,11 @@
 backend:
-  name: test-repo
-  # repo: username/repo-name
+  name: github
+  repo: dunglt94/test-cms
   # auth_type: pkce
   # app_id: YOUR_GITLAB_APPLICATION_ID
-  # branch: main
+  branch: main
+  base_url: https://api.github.com
+  # auth_type: implicit
 
 # Cấu hình chung cho việc lưu trữ hình ảnh
 media_folder: /public/uploads
@@ -18,7 +20,7 @@ collections:
   # ==========================================
   - name: "en-blog"
     label: "EN - Blog"
-    folder: "content/en/blog" # Đường dẫn thư mục lưu file .md của bài viết EN Blog
+    folder: "content/en" # Đường dẫn thư mục lưu file .md của bài viết EN Blog
     create: true
     slug: "{{slug}}"
     format: "frontmatter"
@@ -54,7 +56,7 @@ collections:
 
   - name: "en-news"
     label: "EN - News"
-    folder: "content/en/news"
+    folder: "content/en"
     create: true
     slug: "{{slug}}"
     format: "frontmatter"
@@ -65,7 +67,7 @@ collections:
   # ==========================================
   - name: "ko-blog"
     label: "KO - Blog"
-    folder: "content/ko/blog"
+    folder: "content/ko"
     create: true
     slug: "{{slug}}"
     format: "frontmatter"
@@ -73,7 +75,7 @@ collections:
 
   - name: "ko-news"
     label: "KO - News"
-    folder: "content/ko/news"
+    folder: "content/ko"
     create: true
     slug: "{{slug}}"
     format: "frontmatter"
