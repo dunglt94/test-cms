@@ -27,7 +27,7 @@ collections:
     fields:
       &blog_fields # Dùng anchor để tái sử dụng các fields bên dưới cho nhanh
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "time", widget: "string" }
+      - { label: "Publish Date", name: "time", widget: "datetime" }
       - { label: "Reading Time", name: "readingTime", widget: "string" }
       - { label: "Meta Description", name: "metaDescription", widget: "text" }
       - { label: "Thumbnail Square", name: "image", widget: "image" }
