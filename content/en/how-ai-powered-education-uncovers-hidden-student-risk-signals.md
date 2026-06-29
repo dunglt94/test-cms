@@ -90,7 +90,7 @@ That's exactly why **AI-Powered Education** is becoming one of the most importan
 
 ## 1. Fragmented Data Makes Hidden Student Risk Signals Hard to See
 
-![Caption: 6 Steps for Data Cleaning](/post/en/blog/how-ai-powered-education-uncovers-hidden-student-risk-signals/1.webp)
+![Caption: 6 Steps for Data Cleaning](https://www.upp-technology.com/post/en/blog/how-ai-powered-education-uncovers-hidden-student-risk-signals/1.webp)
 
 The first challenge is data fragmentation. Most education institutions are running a whole stack of separate tools to handle different operational needs such as attendance systems, competency assessment platforms, learning outcome trackers, LMS, CRM, email, chatbots, survey forms, and internal files stored without any real structure. Data from these tools is usually not live-connected within one unified system. Instead, teams often need to wait for manual updates before they can generate the necessary reports on learners. This creates many disconnected pieces of information rather than a unified picture of the learning journey.
 
