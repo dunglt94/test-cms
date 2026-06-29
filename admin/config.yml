@@ -52,7 +52,7 @@ collections:
           summary: "{{fields.tag}}",
           field: { label: "Tag", name: "tag", widget: "string" },
         }
-      - { label: "Content", name: "content", widget: "markdown" }
+      - { label: "Content", name: "body", widget: "markdown" }
 
   - name: "en-news"
     label: "EN - News"
