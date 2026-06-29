@@ -1,0 +1,80 @@
+backend:
+  name: test-repo
+  # repo: username/repo-name
+  # auth_type: pkce
+  # app_id: YOUR_GITLAB_APPLICATION_ID
+  # branch: main
+
+# Cấu hình chung cho việc lưu trữ hình ảnh
+media_folder: /public/uploads
+public_folder: /uploads
+
+# media_library:
+#   name: ""
+
+collections:
+  # ==========================================
+  # 1. TIẾNG ANH (EN)
+  # ==========================================
+  - name: "en-blog"
+    label: "EN - Blog"
+    folder: "content/en/blog" # Đường dẫn thư mục lưu file .md của bài viết EN Blog
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    fields:
+      &blog_fields # Dùng anchor để tái sử dụng các fields bên dưới cho nhanh
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "time", widget: "string" }
+      - { label: "Reading Time", name: "readingTime", widget: "string" }
+      - { label: "Meta Description", name: "metaDescription", widget: "text" }
+      - { label: "Thumbnail Square", name: "image", widget: "image" }
+      - {
+          label: "Thumbnail Landscape",
+          name: "thumbnailImage",
+          widget: "image",
+        }
+      - { label: "URL Slug", name: "url", widget: "string" }
+      - {
+          label: "Type",
+          name: "type",
+          widget: "select",
+          options: ["blog", "news"],
+        }
+      - {
+          label: "Tags",
+          name: "tags",
+          widget: "list",
+          allow_add: true,
+          collapsed: false,
+          summary: "{{fields.tag}}",
+          field: { label: "Tag", name: "tag", widget: "string" },
+        }
+      - { label: "Content", name: "content", widget: "markdown" }
+
+  - name: "en-news"
+    label: "EN - News"
+    folder: "content/en/news"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    fields: *blog_fields # Copy nguyên cụm fields ở trên xuống
+
+  # ==========================================
+  # 2. TIẾNG HÀN (KO)
+  # ==========================================
+  - name: "ko-blog"
+    label: "KO - Blog"
+    folder: "content/ko/blog"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    fields: *blog_fields
+
+  - name: "ko-news"
+    label: "KO - News"
+    folder: "content/ko/news"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    fields: *blog_fields
