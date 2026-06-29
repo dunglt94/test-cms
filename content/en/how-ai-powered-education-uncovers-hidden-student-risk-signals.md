@@ -1,6 +1,6 @@
 ---
 title: How AI-Powered Education Uncovers Hidden Student Risk Signals
-time: 2026-06-29T16:10
+time: 2026-06-11T00:00
 readingTime: 7 mins
 metaDescription: As digital tools multiply across classrooms and operations teams, student data has become like a large picture broken into countless fragments scattered across disconnected systems.
 image: https://www.upp-technology.com/post/en/blog/how-ai-powered-education-uncovers-hidden-student-risk-signals/Thumbnail-vuong.webp
